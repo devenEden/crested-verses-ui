@@ -10,8 +10,6 @@ type PoemType = {
 }
 
 interface PoetryCarouselProps {
-  currentIndex: number;
-  onIndexChange: (index: number) => void;
   data: PoemType;
 }
 

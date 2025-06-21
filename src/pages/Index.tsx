@@ -7,7 +7,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getPoems } from "@/lib/api";
 
 const Index = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const { data, isLoading } = useQuery({
@@ -77,8 +76,6 @@ const Index = () => {
               </p>
             ) : (
               <PoetryCarousel
-                currentIndex={currentIndex}
-                onIndexChange={setCurrentIndex}
                 data={data}
               />
             )}
